@@ -1,0 +1,172 @@
+//1(e)
+/*
+#include <iostream>
+#include <array>
+
+using namespace std;
+int main(){
+    srand(0);
+    array<int, 1000> nums;
+    for(int i = 0; i < 1000; i++)
+        nums[i] = rand()%20;
+
+    for(int i = 0; i < 20; i++)
+        if (nums[i] > 5 && nums[i] < 15)
+            cout << " " << i;
+
+    return 0;
+
+}
+*/
+
+//11
+/*
+#include <iostream>
+#include <array>
+
+int main()
+{
+    std :: array <int,10> arr;
+    int sum = 0;
+    for(int i = 0; i < 10 ; i++)
+    {
+        arr[i] = rand() % 20;
+        sum += arr[i];
+    }
+    int srednee = sum / 10;
+
+    for(int i = 0; i< 10; i++)
+    {
+        if(arr[i] < srednee)
+        {
+            std :: cout << arr[i] << std :: endl;
+        }
+    }
+    return 0;
+}
+
+*/
+
+//14(a)
+/*
+#include <iostream>
+#include <array>
+
+int main()
+{
+    std :: array <int,10> arr1;
+    std :: array <int,10> arr2;
+    std :: array <int,10> arr;
+    for(int  i = 0; i < 10 ; i++)
+    {
+        arr1[i] = rand() % 20;
+    }
+
+    for(int  i = 0; i < 10 ; i++)
+    {
+        arr2[i] = rand() % 20;
+    }
+
+    for(int  i = 0; i < 10 ; i++)
+    {
+        arr[i] = arr1[i] * arr2[i];
+        std :: cout << arr[i] << std :: endl;
+    }
+    return 0;
+}
+*/
+
+//2(b)
+/*
+#include <iostream>
+#include <array>
+
+using namespace std;
+int main()
+{
+    array <int,10> mas;
+    int sum_for_9 = 0;
+    int sum_for_20 = 0;
+    int sum_for_3 = 0;
+
+    for(int i = 0; i < 40 ; i++)
+    {
+        mas[i] = rand() % 40;
+    }
+
+    for(int i=0;i<10;i++){
+        if(mas[i]>9)
+        {
+            sum_for_9 += mas[i];
+        }
+    }
+    cout << ">5 :" << sum_for_9 << endl;
+
+    for(int i=0;i<10;i++){
+        if(mas[i]<20)
+        {
+            sum_for_20 += mas[i];
+        }
+    }
+    cout << "<7 :" << sum_for_20 << endl;
+
+    for(int i=0;i<10;i++){
+        if(mas[i]<3)
+        {
+            sum_for_3 += mas[i];
+        }
+    }
+    cout << ">3 :" <<sum_for_3 << endl;
+    return 0;
+}
+*/
+
+//6
+/*
+#include <iostream>
+#include <array>
+
+using namespace std;
+
+int main()
+{
+    srand(0);
+    array<int, 10> nums;
+    for(int i = 0; i < 10; i++)
+        nums[i] = rand() %10;
+    int  max = INT_MIN;
+    for (int i: nums)
+    {
+
+        if (i > max) {
+            max = i;
+        }
+    }
+
+    cout << "The max element is " << max << endl;
+
+    return 0;
+}
+*/
+
+//7
+/*
+#include <iostream>
+#include <array>
+#include <numeric>
+
+using namespace std;
+
+int main()
+{
+    srand(0);
+    array<int, 10> nums;
+    for(int i = 0; i < 10; i++)
+        nums[i] = rand() %10;
+    float sum = accumulate(begin(nums), end(nums), 0, plus<int>());
+    float sred = sum / 10;
+    cout << "Sred = " << sred;
+
+    return 0;
+}
+*/
